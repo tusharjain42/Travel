@@ -1,18 +1,19 @@
 import React from "react";
-import SignUpPage from "@/Layout/SignUp";
+import Signup from "../../Layout/SignUp"
 import InnerBannerHd from "@/Layout/InnerBannerHeading";
 
-function SignIn() {
+function verify() {
   return (
     <div>
       <InnerBannerHd
         headingImg=""
-        headingText=" Verify Email " 
+        headingText=" Sign Up " 
         subheadingText=""
       />
-      <SignUpPage />
+      <Signup/>
+
     </div>
   );
 }
 
-export default SignIn;
+export default verify;

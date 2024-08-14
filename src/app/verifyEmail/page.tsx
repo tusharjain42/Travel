@@ -1,19 +1,18 @@
 import React from "react";
-import Verifyemail from "../../Layout/VerifyEmail"
+import VerifyEmail from "@/Layout/Verify";
 import InnerBannerHd from "@/Layout/InnerBannerHeading";
 
-function verify() {
+function SignIn() {
   return (
     <div>
       <InnerBannerHd
         headingImg=""
-        headingText=" Sign Up " 
+        headingText=" Verify Email " 
         subheadingText=""
       />
-      <Verifyemail/>
-
+      <VerifyEmail />
     </div>
   );
 }
 
-export default verify;
+export default SignIn;

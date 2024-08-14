@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+.DaySlider {
+    @media only screen and (max-width: $lg) {
+        margin-top: 20px;
+    }
+    .SlideItem {
+        padding: 0 5px;
+    }
+    .DaySlideBlock {
+        border: solid 1px $gray;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        padding: 6px 10px;
+        text-align: center;
+        span {
+            display: block;
+            font-size: 15px;
+            width: 100%;
+        }
+        &:hover {
+            background-color: lighten($green, 50%);
+            border-color: $blue;
+        }
+    }
+}

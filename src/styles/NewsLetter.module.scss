@@ -1,0 +1,92 @@
+@import "./variables.scss";
+
+.NewsLetterOuter {
+  background: #f3f3f3 url(../../public/assets/newsletterBg.jpg) no-repeat center
+    center;
+  background-size: cover;
+  padding: $mpl + 60 0;
+  @media (max-width: $lg) {
+    padding: $mpl + 30 0;
+  }
+  .NewsLetterLeft {
+    @media (max-width: $md) {
+      margin: 0 0 15px;
+    }
+    i {
+      width: 115px;
+      flex: 0 0 115px;
+      margin-right: $mpl + 30;
+      @media (max-width: $lg) {
+        width: 60px;
+        flex: 0 0 60px;
+        margin-right: $mpl + 10;
+      }
+    }
+    p {
+      margin: 0 0 $mpl;
+      @media (max-width: $md) {
+        margin: 0 0 3px;
+      }
+    }
+    h4 {
+      margin: 0;
+    }
+  }
+  .NewsLetterRight {
+    position: relative;
+    max-width: 580px;
+    margin-left: auto;
+    .NewsLetterInput {
+      height: 54px;
+      line-height: 54px;
+      border: none;
+      border-radius: 60px;
+      padding-right: 200px;
+      padding-left: $mpl + 15;
+      font-family: $font-family;
+      @media (max-width: $lg) {
+        padding-right: $mpl + 140;
+        height: 40px;
+        line-height: 40px;
+      }
+      @media (max-width: $md) {
+        padding: 0 110px 0 15px;
+      }
+    }
+    .NewsLetterBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 54px;
+      line-height: 54px;
+      background-color: #023047;
+      border: none;
+      min-width: 180px;
+      text-align: center;
+      padding: 0 $mpl + 10;
+      border-radius: 60px;
+      color: #fff;
+      outline: none;
+      font-family: $font-family;
+      font-size: $mpl + 6;
+      font-weight: 400;
+      display: inline-block;
+      cursor: pointer;
+      @media (max-width: $lg) {
+        height: 40px;
+        line-height: 40px;
+        min-width: 140px;
+        padding: 0 15px;
+        font-size: 14px;
+      }
+      @media (max-width: $md) {
+        min-width: 100px;
+        padding: 0;
+      }
+      &:hover {
+        background-color: #219ebc;
+        border: none;
+      }
+    }
+  }
+}

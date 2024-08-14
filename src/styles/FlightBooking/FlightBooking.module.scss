@@ -1,0 +1,29 @@
+@import "../variables.scss";
+.FlightBookingPage {
+  padding-top: 50px;
+  .FlightBookingLeftSide {
+    width: 61%;
+    flex: 0 0 61%;
+    padding-right: 35px;
+    @media (max-width: $xl) {
+      padding-right: 15px;
+    }
+    @media (max-width: $lg) {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+  .FlightBookingRightSide {
+    width: 39%;
+    flex: 0 0 39%;
+    padding-left: 35px;
+    @media (max-width: $xl) {
+      padding-left: 15px;
+    }
+    @media (max-width: $lg) {
+      width: 100%;
+      flex: 0 0 100%;
+      margin-top: 20px;
+    }
+  }
+}

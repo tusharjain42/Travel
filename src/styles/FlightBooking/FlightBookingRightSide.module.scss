@@ -1,0 +1,192 @@
+@import "../variables.scss";
+.FlightBookingRight {
+  .FlightTravelerHdOut {
+    margin-bottom: 15px;
+    a {
+      color: $green;
+      text-decoration: underline;
+    }
+  }
+  .FlightTravelerHd {
+    font-size: 18px;
+    font-weight: $font-bold;
+    @media (max-width: $md) { 
+      font-size: 16px;
+    }
+  }
+  .CardInfoGray {
+    background-color: $greyf2;
+    border: 0;
+  }
+  .CardInfo {
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid $graylightbdr;
+    margin-bottom: 30px;
+    @media (max-width: $xl) {
+      padding: 15px;
+    }
+    .FlightTravelerTxtLink {
+      &:hover {
+        color: $black;
+      }
+    }
+    .PriceBreakDownRow {
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 0 10px;
+    }
+    .PriceTotalBox {
+      justify-content: space-between;
+      gap: 0 10px;
+      border-top: 1px solid $graylightbdr;
+      margin-left: -30px;
+      margin-right: -30px;
+      margin-top: 10px;
+      padding: 20px 30px 0;
+      @media (max-width: $xl) {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 15px 15px 0;
+      }
+      .PriceTotalHd {
+        font-size: 24px;
+        @media (max-width: $md) {
+          font-size: 20px;
+        }
+      }
+      .PriceTotalSubTxt {
+        font-size: 12px;
+      }
+      .PriceTotalRight {
+        font-size: 24px;
+        color: $green;
+        @media (max-width: $xl) {
+          font-size: 22px;
+        }
+        @media (max-width: $md) {
+          font-size: 18px;
+        }
+      }
+    }
+    .FormControlGray {
+      background-color: $greyf2;
+      border-radius: 0;
+      border: 0;
+      height: 50px;
+      &:focus {
+        box-shadow: none;
+      }
+      input {
+        border-radius: 0;
+        border-color: $orange;
+      }
+      button {
+        background: $orange;
+        color: $white;
+        border: 0;
+        width: 106px;
+        border-radius: 0;
+        font-size: 14px;
+        &:hover{
+          background: $blue;
+        }
+      }
+    }
+    .CouponRow {
+      margin-top: 20px;
+      .CouponCol:not(:last-child) {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $graylightbdr;
+      }
+    }
+    .CustomRadioBox {
+      width: 100%;
+      margin: 1px 0 0;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .CouponCode {
+        border: 2px dashed #ffc68f;
+        padding: 4px 15px;
+        letter-spacing: 2px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: inline-block;
+        @media (max-width: $md) {
+          font-size: 13px;
+          letter-spacing: 1px;
+        }
+      }
+      input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+      }
+      input + label {
+        font-size: 12px;
+        color: $black;
+        position: relative;
+        padding-left: $mpl + 30;
+        .TermsLink {
+          color: $black;
+          text-decoration: underline;
+        }
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          border: 1px solid $graylightbdr;
+          background-color: $greyf2;
+          content: "";
+        }
+        &:after {
+          position: absolute;
+          left: 10px;
+          top: 5px;
+          width: 8px;
+          height: 13px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          content: "";
+          transition: all 0.3s ease;
+          opacity: 0;
+          display: block;
+        }
+      }
+      input:checked + label {
+        &:before {
+          background-color: $orange;
+          border-color: $orange;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+      .SubText {
+        color: $black;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0 0 0 32px;
+        p {
+          margin: 0;
+        }
+        span {
+          color: $blue;
+          margin-top: -19px;
+        }
+      }
+    }
+  }
+}

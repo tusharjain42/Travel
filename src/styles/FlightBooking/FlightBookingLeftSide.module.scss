@@ -1,0 +1,233 @@
+@import "../variables.scss";
+.FlightBookingLeft {
+  .FlightTravelerTxtLink {
+    color: $green;
+    position: relative;
+    padding-left: 10px;
+    margin-left: 10px;
+    text-decoration: underline;
+    font-size: 12px;
+    border-left: 1px solid $black;
+    &:hover {
+      color: $black;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
+      border-left: 0;
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+  p {
+    font-size: 12px;
+  }
+  .FlightTravelerHd {
+    font-size: 18px;
+    font-weight: $font-bold;
+    margin-bottom: 10px;
+    @media (max-width: $md) {
+      font-size: 16px;
+    }
+  }
+  .FlightTravelerTrip {
+    margin-bottom: 40px;
+    .FlightTravelerTxt {
+      font-size: 14px;
+    }
+  }
+  .ContentBox {
+    margin-bottom: 40px;
+    .FormLabel {
+      margin-bottom: 10px;
+      @media (max-width: $md) {
+        margin-bottom: 5px;
+      }
+    }
+    .FormControlGray {
+      background-color: $greyf2;
+      border-radius: 0;
+      border: 0;
+      height: 50px;
+      @media (max-width: $md) {
+        height: 40px;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .FlyerHeadingBox {
+      margin-bottom: 20px;
+    }
+    .CustomCHK {
+      width: 100%;
+      margin: 1px 0 0;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+      }
+      input + label {
+        font-size: 14px;
+        color: $black;
+        position: relative;
+        line-height: 22px;
+        padding-left: $mpl + 30;
+        .WhatsAppTxt {
+          color: $tagColor;
+          display: inline-block;
+          &:hover {
+            color: $black;
+          }
+        }
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 27px;
+          height: 27px;
+          border-radius: 5px;
+          border: 1px solid #c4c7d0;
+          content: "";
+        }
+        &:after {
+          position: absolute;
+          left: 10px;
+          top: 5px;
+          width: 8px;
+          height: 13px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          content: "";
+          transition: all 0.3s ease;
+          opacity: 0;
+          display: block;
+        }
+      }
+      input:checked + label {
+        &:before {
+          background-color: $green;
+          border-color: $green;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+      .SubText {
+        color: $black;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0 0 0 32px;
+        p {
+          margin: 0;
+        }
+        span {
+          color: $blue;
+          margin-top: -19px;
+        }
+      }
+    }
+    .WeightBox {
+      margin-bottom: 40px;
+      .CustomCHKColorText {
+        margin-left: 10px;
+        color: $orange;
+        font-weight: $font-bold;
+        @media (max-width: $sm) {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+    .PaymentLogo {
+      border-radius: 5px;
+      padding: 10px;
+      border: 1px solid $graylightbdr;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .CardInfo {
+      border: 1px solid $graylightbdr;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      @media (max-width: $xl) {
+        padding: 15px;
+      }
+      .FlyerNameInfo {
+        font-weight: $font-bold;
+        margin-bottom: 25px;
+      }
+      button {
+        background-color: $greyf2;
+        border: 0;
+        margin-right: 20px;
+        width: 135px;
+        border-radius: 0;
+        font-size: 16px;
+        color: $black;
+        position: relative;
+        padding-right: 40px;
+        &:focus {
+          color: $black;
+        }
+        &:after {
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-image: url("../../../public/assets/down-low.svg");
+          width: 12px;
+          height: 12px;
+          border: 0;
+          background-repeat: no-repeat;
+        }
+        &:hover {
+          color: $black;
+        }
+        img {
+          border-radius: 50%;
+          width: 23px !important;
+          height: 23px !important;
+          overflow: hidden;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .ButtonBottomBox {
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 0 30px;
+    .ButtonBottomBack {
+      color: $green;
+      text-decoration: none;
+    } 
+    .SiteBtn {
+      background-color: $orange;
+      font-size: 14px;
+      padding: 7px 15px;
+      border-radius: 5px;
+      border: 0;
+      color: #fff;
+      min-width: 185px;
+      text-align: center;
+      @media (max-width: $lg) {
+        width: auto;
+      }
+      &:hover {
+        background-color: $blue;
+      }
+    }
+  }
+}

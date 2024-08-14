@@ -1,0 +1,65 @@
+@import "./variables.scss";
+
+.PreloaderOuter {
+  background-color: rgba(3, 38, 55, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99999999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .PreloaderContainer {
+    width: 100%;
+    max-width: 730px;
+    margin: 20px auto;
+    height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    max-height: 530px;
+    border-radius: 8px;
+    padding: 0 25px 25px;
+    @media (max-width: $md) {
+      width: auto;
+      max-width: 370px;
+      margin: 15px;
+      padding: 0 20px 20px;
+    }
+    .PreImg {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 16px;
+      @media (max-width: $md) {
+        font-size: 14px;
+        br {
+          display: none;
+        }
+      }
+    }
+    .LdrBtn {
+      text-align: center;
+      padding: 0px 30px;
+      background-color: #219ebc;
+      border: none;
+      border-radius: 50px;
+      height: 50px;
+      line-height: 50px;
+      color: #fff;
+      outline: none;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      display: inline-block;
+      cursor: pointer;
+      &:hover {
+        background-color: #023047;
+        color: #fff;
+      }
+    }
+  }
+}

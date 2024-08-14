@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.DiscoverListCard {
+  border: solid 1px #219ebc;
+  border-radius: 30px 10px 30px 10px;
+  padding: 30px 18px;
+  height: 100%;
+  color: $white;
+  text-align: center;
+  @media (max-width: $lg) {
+    padding: 15px;
+  }
+  @media (max-width: $md) {
+    margin-bottom: 20px;
+    height: calc(100% - 20px);
+  }
+  h5 {
+    color: $white;
+    font-weight: $font-medium;
+    margin: 0 0 $mpl + 5;
+  }
+  p {
+    color: $white;
+  }
+  i {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

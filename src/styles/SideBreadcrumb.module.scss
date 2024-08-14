@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+.BreadcrumbOuter {
+  margin-bottom: 25px;
+  li {
+    font-size: 14px;
+    @media (max-width: $md) {
+      font-size: 12px;
+    }
+    &:before {
+      display: none;
+    }
+    a {
+      color: #21afbc;
+      text-decoration: underline;
+      position: relative;
+      padding-right: 10px;
+      margin-right: 10px;
+      @media (max-width: $md) {
+        padding-right: 6px;
+        margin-right: 6px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &::after {
+        position: absolute;
+        right: -8px;
+        top: -3px;
+        content: ">";
+        color: #000;
+        font-family: cursive;
+        font-size: 16px;
+        @media (max-width: $md) {
+          top: -4px;
+        }
+      }
+    }
+  }
+}

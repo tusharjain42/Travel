@@ -1,0 +1,77 @@
+@import "./variables.scss";
+
+.Footer {
+  background: $blue url(../../public/assets/footerBg.jpg) no-repeat center
+    bottom;
+  background-size: cover;
+  padding-top: $mpl + 60;
+  padding-bottom: $mpl + 30;
+  @media (max-width: $lg) {
+    padding: $mpl + 30 0 $mpl + 10;
+  }
+  .FtInfo {
+    a {
+      display: block;
+      margin-bottom: $mpl + 10;
+      @media (max-width: $md) {
+        width: 130px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .FtLinks {
+    padding-left: $mpl + 40;
+    @media (max-width: $md) {
+      padding: 0;
+      margin: 30px 0 15px;
+    }
+    .FtLinksCard {
+      .FtrNav {
+        width: 50%;
+        flex: 0 0 50%;
+        flex-direction: column;
+        a {
+          position: relative;
+          padding: 0 0 0 $mpl + 10;
+          margin-bottom: $mpl + 5;
+          background: url(../../public/assets/arrow1.png) no-repeat left 4px;
+        }
+      }
+    }
+  }
+  .FtContact {
+    .FtrCtNav {
+      flex-direction: column;
+      a {
+        margin-bottom: $mpl + 8;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        img {
+          padding-right: $mpl;
+        }
+      }
+    }
+  }
+  .CopyRight {
+    text-align: center;
+    color: #b6c7c9;
+    padding-top: $mpl + 60;
+    @media (max-width: $lg) {
+      padding-top: $mpl + 20;
+    }
+  }
+  h6 {
+    color: $white;
+  }
+  p {
+    color: #b6c7c9;
+  }
+  a {
+    color: #b6c7c9;
+    &:hover,
+    &:focus {
+      color: $yellow;
+    }
+  }
+}

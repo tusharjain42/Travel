@@ -1,0 +1,76 @@
+@import "../variables.scss";
+
+.aboutUsSec {
+  background-color: $greyf2;
+  position: relative;
+  padding: 70px 0;
+  @media (max-width: $lg) {
+    padding: 40px 0;
+  }
+
+  .heading {
+    span {
+      font-weight: 400;
+      color: $green;
+      display: block;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    h2 {
+      br {
+        display: none;
+      }
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  .row {
+    align-items: center;
+  }
+
+  .aboutUsSecImg {
+    @media (max-width: $lg) {
+      margin-bottom: 35px;
+    }
+  }
+  .rightCol {
+    .aboutUsSecPoints {
+      .aboutUsSecItem {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 30px;
+        position: relative;
+        &:last-child {
+          padding-bottom: 0px;
+          &::after {
+            display: none;
+          }
+        }
+        h5 {
+          margin-bottom: 5px;
+        }
+        i {
+          background: $white;
+          border: 1px solid $greyd5;
+          z-index: 1;
+          font-weight: 600;
+          text-align: center;
+          line-height: 80px;
+          border-radius: 50%;
+          color: #fff;
+          width: 80px;
+          height: 80px;
+          font-style: normal;
+        }
+        .text {
+          width: calc(100% - 90px);
+          margin-left: auto;
+          padding-left: 5px;
+          padding-top: 7px;
+        }
+      }
+    }
+  }
+}

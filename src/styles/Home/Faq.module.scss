@@ -1,0 +1,40 @@
+@import "../variables.scss";
+
+.FaqOuter {
+  background-color: $white;
+  padding: $mpl + 60 0;
+  @media (max-width: $lg) {
+    padding: $mpl + 30 0;
+  }
+  .FaqImg{
+    @media (max-width: $md) {
+      margin-bottom: 20px;
+    }
+  }
+  .CustomAccordion {
+    margin: 0 0 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    .CustomAccordionHdr {
+      button {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        font-weight: $font-semibold;
+        padding: $mpl + 20;
+        @media (max-width: $lg) {
+          padding: $mpl + 5;
+        }
+      }
+    }
+    .CustomAccordionBody {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0 $mpl + 20 $mpl + 20;
+      @media (max-width: $lg) {
+        padding: 0 $mpl + 5 $mpl + 5;
+      }
+    }
+  }
+}

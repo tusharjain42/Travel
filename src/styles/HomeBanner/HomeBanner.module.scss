@@ -1,0 +1,476 @@
+@import "../variables.scss";
+
+.BannerHome {
+  background: #023047 url(../../../public/assets/home-bnr-bg.jpg) no-repeat
+    center center;
+  padding: 160px 0px 50px;
+  background-size: cover;
+  font-family: $font-family;
+  @media (max-width: $lg) {
+    padding: 110px 0px 50px;
+  }
+  .BannerHeading {
+    padding-bottom: 40px;
+    h1 {
+      color: $white;
+      margin-bottom: 40px;
+      span {
+        color: $yellow;
+        position: relative;
+        @media (max-width: $md) {
+          display: block;
+        }
+        &:after {
+          background: url(../../../public/assets/line.png) no-repeat;
+          width: 335px;
+          height: 26px;
+          position: absolute;
+          bottom: -28px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          content: "";
+          @media (max-width: $xl) {
+            width: 250px;
+            background-size: cover;
+          }
+        }
+      }
+    }
+    h6 {
+      font-weight: 400;
+      margin-bottom: 0;
+      color: $white;
+    }
+  }
+  .HomeSearch {
+    .TabNav {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .TabNavList {
+        margin: 0 4px;
+        @media (max-width: $md) {
+          margin: 0 2px;
+        }
+        .TabLink {
+          text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          padding: 0 $mpl + 10;
+          background-color: #385c6e;
+          border-radius: 5px 5px 0 0;
+          border: none;
+          color: $white;
+          font-size: $mpl + 4;
+          font-weight: $font-medium;
+          display: flex;
+          align-items: center;
+          height: $mpl + 36;
+          line-height: $mpl + 36;
+          margin: 0;
+          @media (max-width: $md) {
+            height: $mpl + 30;
+            line-height: $mpl + 30;
+            font-size: $mpl + 3;
+            padding: 0 7px;
+          }
+          i {
+            margin-right: 8px;
+            @media (max-width: $md) {
+              margin-right: 5px;
+            }
+            img {
+              display: block;
+            }
+          }
+          &[aria-selected="true"] {
+            background-color: $yellow;
+          }
+        }
+      }
+    }
+    .TripBlock {
+      margin: 0 $mpl + 40;
+      background-color: #e2e2e2;
+      padding: 7px $mpl + 10;
+      border-radius: 6px 6px 0 0;
+      @media (max-width: $md) {
+        margin: 0;
+        padding: 7px;
+      }
+      .CustomCHK {
+        margin-right: $mpl + 25;
+        padding-left: 0;
+        min-height: $mpl + 14;
+        line-height: $mpl + 14;
+        margin-bottom: 0;
+        @media (max-width: $md) {
+          margin-right: $mpl;
+        }
+        input {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0;
+          height: 0;
+          margin: 0;
+          opacity: 0;
+        }
+        input + label {
+          font-weight: 600;
+          font-size: $mpl + 4;
+          position: relative;
+          padding-left: $mpl + 22;
+          @media (max-width: $md) {
+            font-size: $mpl + 2;
+            padding-left: $mpl + 18;
+          }
+          &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: $mpl + 14;
+            height: $mpl + 14;
+            border-radius: 50%;
+            border: 1px solid #837e85;
+            content: "";
+          }
+          &:after {
+            position: absolute;
+            left: 9px;
+            top: 5px;
+            width: 6px;
+            height: 11px;
+            border: solid $white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            content: "";
+            transition: all 0.3s ease;
+            opacity: 0;
+            display: block;
+          }
+        }
+        input:checked + label {
+          &:before {
+            background-color: $green;
+            border-color: $green;
+          }
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .SearchCardBlock {
+      background-color: $white;
+      border-radius: 10px;
+      @media (max-width: $lg) {
+        display: block !important;
+      }
+      @media (max-width: $md) {
+        border-radius: 0 0 10px 10px;
+        padding-top: 10px;
+      }
+      .SearchCardBlockLeft {
+        flex: 1;
+        padding-right: 5px;
+        padding-left: 5px;
+        @media (max-width: $lg) {
+          flex-wrap: wrap;
+        }
+        @media (max-width: $md) {
+          padding: 0;
+        }
+        .FormCard {
+          border-right: solid 1px #ebe6de;
+          .SrchLabel {
+            margin: 0;
+            @media (max-width: $xl) {
+              font-size: $mpl + 3;
+            }
+          }
+          .SrchInput {
+            height: $mpl + 30;
+            line-height: $mpl + 30;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            font-family: $font-family;
+            background: none;
+            @media (max-width: $xl) {
+              font-size: $mpl + 3;
+              height: 30px;
+              line-height: 30px;
+            }
+          }
+          .TrvlBtn {
+            background: none;
+            border: none;
+            padding: 3px $mpl + 5 0;
+            border-radius: 0;
+            width: 100%;
+            height: 101px;
+            color: $black;
+            white-space: inherit;
+            text-align: left;
+            font-size: $mpl + 4;
+            position: relative;
+            @media (max-width: $xl) {
+              font-size: $mpl + 3;
+              padding: 3px $mpl 0;
+              height: 76px;
+            }
+            @media (max-width: $md) {
+              height: 60px;
+              padding: 0 15px;
+            }
+            span {
+              display: block;
+              padding: $mpl + 1 0 0;
+              @media (max-width: $xl) {
+                padding: 6px 0 0;
+              }
+            }
+            &:after {
+              border: none;
+              background: url(../../../public/assets/arrow2.png) no-repeat
+                center center;
+              width: 16px;
+              height: 9px;
+              position: absolute;
+              top: 47px;
+              right: 10px;
+              content: "";
+              margin: 0;
+              @media (max-width: $xl) {
+                width: 11px;
+                right: 5px;
+                top: 34px;
+                background-size: 100% auto;
+              }
+              @media (max-width: $md) {
+                top: 25px;
+                right: 10px;
+              }
+            }
+          }
+          &.FrmWd1 {
+            width: 20%;
+            padding: $mpl + 15 $mpl + 5 0;
+            @media (max-width: $xl) {
+              padding: $mpl + 5 $mpl 0;
+            }
+            @media (max-width: $lg) {
+              width: 50%;
+              border-bottom: 1px solid #ebe6de;
+            }
+            @media (max-width: $md) {
+              width: 100%;
+              padding: 5px 15px;
+            }
+          }
+          &.FrmWd2 {
+            width: 20%;
+            padding: $mpl + 15 $mpl + 5 0;
+            @media (max-width: $xl) {
+              padding: $mpl + 5 $mpl 0;
+            }
+            @media (max-width: $lg) {
+              width: 50%;
+              border-bottom: 1px solid #ebe6de;
+              border-right: none;
+            }
+            @media (max-width: $md) {
+              width: 100%;
+              padding: 5px 15px;
+            }
+          }
+          &.FrmWd3 {
+            width: 30%;
+            @media (max-width: $lg) {
+              width: 50%;
+              border-bottom: 1px solid #ebe6de;
+            }
+            @media (max-width: $md) {
+              width: 100%;
+              display: flex;
+            }
+            .FrmWdDT1 {
+              width: 50%;
+              border-right: solid 1px #ebe6de;
+              padding: $mpl + 15 $mpl + 5 0;
+              background: url(../../../public/assets/cald-icon.png) no-repeat
+                right 15px center;
+              @media (max-width: $xl) {
+                padding: $mpl + 5 $mpl 0;
+                background-position: right 10px center;
+                background-size: 16px auto;
+              }
+              @media (max-width: $md) {
+                padding: 5px 15px;
+              }
+            }
+            .FrmWdDT2 {
+              width: 50%;
+              padding: $mpl + 15 $mpl + 5 0;
+              background: url(../../../public/assets/cald-icon.png) no-repeat
+                right 15px center;
+              @media (max-width: $xl) {
+                padding: $mpl + 5 $mpl 0;
+                background-position: right 10px center;
+                background-size: 16px auto;
+              }
+              @media (max-width: $md) {
+                padding: 5px 15px;
+              }
+            }
+          }
+          &.FrmWd4 {
+            width: 15%;
+            @media (max-width: $lg) {
+              width: 25%;
+              border-bottom: 1px solid #ebe6de;
+            }
+            @media (max-width: $md) {
+              width: 100%;
+            }
+            .TrvlDropDown {
+              border-radius: 15px 0 15px 15px;
+              right: 0 !important;
+              transform: inherit !important;
+              left: auto !important;
+              top: 100% !important;
+              margin: 0 !important;
+              border: none;
+              padding: 0;
+              min-width: 390px;
+              box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+              z-index: 5;
+              .TrvlTopBox {
+                padding: 20px;
+              }
+              .TrvlBtmBox {
+                background-color: #f2f2f2;
+                padding: 20px;
+                text-align: right;
+              }
+              .ApplyBtn {
+                height: 50px;
+                line-height: 50px;
+                border-radius: 50px;
+                min-width: 150px;
+                background-color: $green;
+                border-color: $green;
+                padding: 0;
+                &:hover {
+                  background: $blue;
+                  color: $white;
+                }
+              }
+            }
+          }
+          &.FrmWd5 {
+            width: 15%;
+            @media (max-width: $lg) {
+              width: 25%;
+              border-bottom: 1px solid #ebe6de !important;
+            }
+            @media (max-width: $md) {
+              width: 100%;
+            }
+          }
+          &.FrmWd11 {
+            width: 30%;
+            @media (max-width: $md) {
+              width: 100%;
+            }
+          }
+          &.FrmWd12 {
+            width: 40%;
+            @media (max-width: $md) {
+              width: 100%;
+            }
+          }
+        }
+        .Bdr0 {
+          border: none !important;
+        }
+      }
+      .SearchBtnBlock {
+        @media (max-width: $lg) {
+          padding: 5px;
+        }
+        .SrchBtn {
+          background: $blue;
+          border: none;
+          margin: 3px;
+          width: 95px;
+          height: 95px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          box-shadow: none;
+          &:hover {
+            background: $yellow;
+          }
+          @media (max-width: $xl) {
+            width: 70px;
+            height: 70px;
+          }
+          @media (max-width: $lg) {
+            margin: 0;
+            width: 100%;
+            height: 40px;
+            img {
+              display: none;
+            }
+          }
+          span {
+            display: none;
+            @media (max-width: $lg) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .FlexibleBox {
+      max-width: 210px;
+      margin: 0 auto;
+      padding: 7px 0;
+      width: 100%;
+      .SwitchBtn {
+        color: $white;
+        margin: 0;
+        padding-left: $mpl + 40;
+        input {
+          box-shadow: none;
+          width: 40px;
+          height: 20px;
+          margin-left: -48px;
+          margin-top: 1px;
+          background-color: $white;
+          border-color: $white;
+          &:focus {
+            background-color: $white;
+            border-color: $white;
+          }
+          &:checked {
+            background-color: $yellow;
+            border-color: $yellow;
+          }
+        }
+        label {
+          font-size: $mpl + 4;
+        }
+      }
+    }
+  }
+  .DiscoverList {
+    margin: 50px 0 0;
+    @media (max-width: $md) {
+      margin: 30px 0 0;
+    }
+  }
+}

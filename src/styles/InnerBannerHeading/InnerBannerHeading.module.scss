@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+.InnerBannerHd {
+  background: #023047 url(../../../public/assets/home-bnr-bg.jpg) no-repeat
+    center center;
+  padding: 130px 0px 30px;
+  background-size: cover;
+  font-family: $font-family;
+  @media (max-width: $lg) {
+    padding: 100px 0 20px;
+  }
+  .InrBnrHd {
+    text-align: center;
+    h1 {
+      color: $white;
+      font-size: 30px;
+      margin:0;
+      @media (max-width: $md) {
+        font-size: 24px;
+      }
+      span {
+        font-weight: 400;
+        @media (max-width: $md) {
+          display: block;
+        }
+      }
+    }
+  }
+}

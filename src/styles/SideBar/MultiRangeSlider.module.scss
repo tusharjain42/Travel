@@ -1,0 +1,101 @@
+@import "../variables.scss";
+
+.MultiSlider {
+  position: relative;
+  width: 100%;
+  min-height: 35px;
+  margin: 25px 0 30px;
+
+  .SliderTrack,
+  .SliderRange,
+  .SliderLeftValue,
+  .SliderRightValue {
+    position: absolute;
+  }
+
+  .SliderTrack,
+  .SliderRange {
+    height: 5px;
+  }
+
+  .SliderTrack {
+    background-color: $graylightbdr;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .SliderRange {
+    background-color: $green;
+    z-index: 2;
+  }
+
+  .SliderLeftValue,
+  .SliderRightValue {
+    color: $black;
+    font-size: 12px;
+    margin-top: 20px;
+    border: 1px solid $graylightbdr;
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-top: 30px;
+    min-width: 50px;
+    text-align: center;
+  }
+
+  .SliderLeftValue {
+    left: 0;
+  }
+
+  .SliderRightValue {
+    right: 0;
+  }
+
+  /* Removing the default appearance */
+  .thumb,
+  .thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    outline: none;
+  }
+
+  .thumbLeft {
+    z-index: 3;
+  }
+
+  .thumbRight {
+    z-index: 4;
+  }
+
+  /* For Chrome browsers */
+  .thumb::-webkit-slider-thumb {
+    background-color: $white;
+    border: 2px solid $green;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+  }
+
+  /* For Firefox browsers */
+  .thumb::-moz-range-thumb {
+    background-color: $white;
+    border: 2px solid $green;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+  }
+}

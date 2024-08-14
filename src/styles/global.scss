@@ -1,0 +1,343 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./variables.scss";
+
+body {
+  background-color: $white;
+  font-family: $font-family;
+  font-size: $mpl + 4;
+  color: $black;
+  font-weight: $font-normal;
+}
+.__className_aaf875 {
+  font-family: $font-family;
+}
+a,
+button {
+  transition: all 0.3s ease;
+}
+a {
+  text-decoration: none;
+  color: $green;
+}
+a:hover {
+  text-decoration: none;
+  outline: 0;
+  color: $black;
+}
+a,
+img {
+  border: none;
+  outline: none;
+}
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+label {
+  font-weight: $font-normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
+  color: $black;
+  font-weight: $font-semibold;
+  margin: 0 0 $mpl + 10;
+}
+h1 {
+  font-size: $mpl + 32;
+  @media (max-width: $xxl) {
+    font-size: $mpl + 28;
+  }
+  @media (max-width: $xl) {
+    font-size: $mpl + 22;
+  }
+}
+h2 {
+  font-size: $mpl + 26;
+  @media (max-width: $xxl) {
+    font-size: $mpl + 22;
+  }
+  @media (max-width: $xl) {
+    font-size: $mpl + 18;
+  }
+}
+h3 {
+  font-size: $mpl + 20;
+  @media (max-width: $xxl) {
+    font-size: $mpl + 18;
+  }
+  @media (max-width: $xl) {
+    font-size: $mpl + 14;
+  }
+}
+h4 {
+  font-size: $mpl + 14;
+  @media (max-width: $xxl) {
+    font-size: $mpl + 10;
+  }
+}
+h5 {
+  font-size: $mpl + 10;
+  @media (max-width: $xxl) {
+    font-size: $mpl + 8;
+  }
+}
+h6 {
+  font-size: $mpl + 8;
+  @media (max-width: $xxl) {
+    font-size: $mpl + 6;
+  }
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+p {
+  display: block;
+  margin: 0 0 $mpl + 6;
+  color: $black;
+}
+p:last-child {
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: $mpl + 10;
+}
+.form-control {
+  height: 50px;
+  line-height: 50px;
+  font-size: $mpl + 4;
+  color: $black;
+  background: $white;
+  border-radius: 10px;
+  border: 1px solid #dfdfdf;
+  outline: none;
+  padding: 0px $mpl + 6;
+}
+.form-control:focus {
+  color: $black;
+  background-color: $white;
+  border-color: $green;
+  outline: 0;
+  box-shadow: none;
+  outline: none;
+}
+select.form-control {
+  appearance: none;
+  padding: 0 $mpl + 6;
+  height: 45px !important;
+  line-height: 45px;
+  background: $white url(../../public/assets/arrow2.png) no-repeat center right
+    16px;
+}
+.text-right {
+  text-align: right;
+}
+.container {
+  width: 100%;
+  max-width: 1300px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.headingBlock {
+  padding-bottom: $mpl + 30;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.headingBlock h2 {
+  margin-bottom: 0;
+}
+.headingBlock p {
+  margin-bottom: 0;
+  padding-top: $mpl + 5;
+}
+
+.padding-top-100 {
+  padding-top: $mpl + 90;
+  @media (max-width: $xxl) {
+    padding-top: $mpl + 50;
+  }
+  @media (max-width: $xl) {
+    padding-top: $mpl + 30;
+  }
+}
+.padding-bottom-100 {
+  padding-bottom: $mpl + 90;
+  @media (max-width: $xxl) {
+    padding-bottom: $mpl + 50;
+  }
+  @media (max-width: $xl) {
+    padding-bottom: $mpl + 30;
+  }
+}
+.padding-top-bottom-90 {
+  padding-top: $mpl + 80;
+  padding-bottom: $mpl + 80;
+  @media (max-width: $xxl) {
+    padding-top: $mpl + 50;
+    padding-bottom: $mpl + 50;
+  }
+  @media (max-width: $xl) {
+    padding-top: $mpl + 30;
+    padding-bottom: $mpl + 30;
+  }
+}
+
+.customcheckBox {
+  font-weight: 400;
+  padding-left: 40px;
+  position: relative;
+  margin: 0;
+}
+.customcheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmarkCheck {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #dfdfdf;
+}
+.customcheckBox input:checked ~ .checkmarkCheck {
+  background-color: #219ebc;
+  border-color: #219ebc;
+}
+.checkmarkCheck:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.customcheckBox input:checked ~ .checkmarkCheck::after {
+  display: block;
+}
+.customcheckBox .checkmarkCheck::after {
+  left: 8px;
+  top: 3px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.customRadio {
+  font-weight: 600;
+  padding-left: 35px;
+  position: relative;
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+  margin-right: 30px;
+}
+.customRadio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: solid 1px #837e85;
+}
+.customRadio input:checked ~ .checkmark {
+  background-color: #219ebc;
+  border-color: #219ebc;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.customRadio input:checked ~ .checkmark:after {
+  display: block;
+}
+.customRadio .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.modal-backdrop.show {
+  opacity: 0.2;
+}
+.sticky {
+  background: #023548;
+}
+
+.globalBtn {
+  height: 57px;
+  display: inline-block;
+  line-height: 57px;
+  font-size: 16px;
+  padding: 0 40px;
+  min-width: 185px;
+  border-radius: 30px;
+  border: 1px solid $green;
+  color: $green;
+  text-align: center;
+  &:hover {
+    background-color: $green;
+    color: $white;
+  }
+}
+
+.FlightDetailModal {
+  .modal-dialog {
+    margin-left: auto;
+    margin-right: 0;
+    transition: none !important;
+  }
+}
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+.required {
+  color: red;
+  font-size: 13px;
+  margin: 3px 0 0;
+  border-color: red !important;
+}
+#input-group-dropdown-1,
+button.dropdown-toggle.show.btn.btn-outline-secondary {
+  background: #fff;
+  color: #000;
+  border-color: #dfdfdf;
+  border-radius: 10px 0 0 10px;
+}

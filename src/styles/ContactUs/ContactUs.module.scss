@@ -1,0 +1,89 @@
+@import "../variables.scss";
+
+.ContactUsOuter {
+  background-color: $white;
+  padding: $mpl + 60 0;
+  @media (max-width: $lg) {
+    padding: $mpl + 30 0;
+  }
+  @media (max-width: $md) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .CtInfo {
+    padding-bottom: $mpl + 60;
+    @media (max-width: $lg) {
+      padding: 0 0 $mpl + 30;
+    }
+    @media (max-width: $md) {
+      order: 3;
+      padding: $mpl + 30 3px $mpl + 15;
+    }
+    .CtDtl {
+      background: #f8f8f8;
+      text-align: center;
+      height: 100%;
+      border-radius: 3px;
+      border-top: 5px solid #093d66;
+      padding: $mpl + 20 $mpl + 5;
+      @media (max-width: $lg) {
+        padding: $mpl + 10 $mpl + 5;
+      }
+      @media (max-width: $md) {
+        height: auto;
+        margin: 0 0 $mpl + 5;
+      }
+      h5 {
+        font-size: 25px;
+        font-weight: 600;
+        margin: $mpl + 18 0 8px;
+        text-transform: uppercase;
+        line-height: 24px;
+        @media (max-width: $lg) {
+          font-size: $mpl + 10;
+          margin: $mpl + 10 0 5px;
+        }
+      }
+    }
+  }
+  .CtMap {
+    position: relative;
+    @media (max-width: $md) {
+      order: 2;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      outline: none;
+    }
+  }
+  .CtForm {
+    max-width: 970px;
+    width: 100%;
+    margin: -70px auto 0;
+    padding: $mpl + 60 $mpl + 20 0;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.1);
+    @media (max-width: $lg) {
+      margin: 0 auto;
+      padding: $mpl + 30 $mpl + 10 0;
+    }
+    @media (max-width: $md) {
+      order: 1;
+      padding: $mpl + 30 $mpl + 5 $mpl + 10;
+      box-shadow: none;
+    }
+    .FormGroup {
+      margin-bottom: $mpl + 10;
+      .FormTextarea {
+        min-height: 100px;
+        height: auto;
+        line-height: normal;
+        padding: $mpl + 6;
+      }
+    }
+  }
+}

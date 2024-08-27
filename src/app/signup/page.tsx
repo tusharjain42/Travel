@@ -1,5 +1,5 @@
 import React from "react";
-import Signup from "../../Layout/SignUp"
+import Signup from "../../Layout/Signup"
 import InnerBannerHd from "@/Layout/InnerBannerHeading";
 
 function verify() {

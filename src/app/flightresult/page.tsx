@@ -10,11 +10,8 @@ import Footer from "@/Layout/GLobal/Footer";
 function Index() {
   return (
     <div>
-      <Header />
       <InnerBanner />
       <FlightResultPage /> 
-      <NewsLetter />
-      <Footer />
     </div>
   );
 }

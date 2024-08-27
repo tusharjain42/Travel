@@ -1,0 +1,629 @@
+@import "../variables.scss";
+
+.HotelDetailOuter {
+  background-color: $white;
+  padding: $mpl + 20 0 $mpl + 60;
+  .ContainerCss {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $lg) {
+      display: block;
+    }
+    .HotelDtl_left {
+      width: 65.5%;
+      position: relative;
+      @media (max-width: $lg) {
+        width: 100%;
+      }
+      .HotelDtlTop {
+        h1 {
+          font-size: 20px;
+          font-weight: 700;
+          margin: 0 0 7px;
+        }
+        .TripRvOuter {
+          display: flex;
+          align-items: center;
+          margin: 0 0 20px;
+          @media (max-width: $md) {
+            display: block;
+          }
+          .ReviewImg {
+            margin-left: 10px;
+            @media (max-width: $md) {
+              margin: 7px 0;
+            }
+          }
+          .LcnBlock {
+            display: flex;
+            align-items: center;
+            margin: 0 0 0 25px;
+            font-size: 12px;
+            @media (max-width: $md) {
+              margin: 0;
+            }
+            span {
+              margin: 0 7px;
+            }
+            a {
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+      .SwiperImg {
+        img {
+          width: 100%;
+          border-radius: 10px;
+          @media (max-width: $md) {
+            border-radius: 5px;
+          }
+        }
+      }
+      .MainSlider {
+        margin: 0 0 0 5px;
+        .SwiperImg {
+          img {
+            border-radius: 15px;
+          }
+        }
+      }
+      .ThumbSlider {
+        position: relative;
+        .SwiperImg {
+          width: auto !important;
+          margin: 5px 5px 0;
+          cursor: pointer;
+        }
+        .moreImg {
+          position: absolute;
+          right: 1px;
+          top: 5px;
+          width: 19%;
+          background-color: rgba(0, 0, 0, 0.7);
+          bottom: 5px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: #fff;
+          z-index: 1;
+          @media (max-width: $md) {
+            border-radius: 5px;
+            font-size: 11px;
+            line-height: 1.1;
+          }
+          strong {
+            display: block;
+          }
+        }
+      }
+      .HtlDtlFullInfo {
+        margin: 20px 0 0;
+        .HtlNavOuter {
+          border: none;
+          background: #e8f7f8;
+          border-radius: 6px;
+          position: sticky;
+          top: 101px;
+          z-index: 5;
+          @media (max-width: $lg) {
+            top: 75px;
+          }
+          @media (max-width: $md) {
+            display: flex;
+            white-space: nowrap;
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            margin-left: -12px;
+            margin-right: -12px;
+            width: auto;
+            padding: 5px;
+            border-radius: 0;
+          }
+          .HtlNavItem {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            a {
+              border: none;
+              outline: none;
+              box-shadow: none;
+              border-radius: 6px;
+              color: #000;
+              display: flex;
+              align-items: center;
+              @media (max-width: $md) {
+                padding: 5px 8px;
+                border-radius: 4px;
+              }
+              img {
+                padding-right: 8px;
+                @media (max-width: $md) {
+                  display: none;
+                }
+              }
+              &.Active {
+                background-color: #21afbc;
+                color: #fff;
+                img {
+                  filter: brightness(100);
+                }
+              }
+            }
+          }
+        }
+        .HtlTabContent {
+          border: none;
+          h3 {
+            font-size: 20px;
+            margin: 0 0 10px;
+          }
+          h4 {
+            font-size: 17px;
+            margin: 0 0 10px;
+          }
+          h5 {
+            font-size: 15px;
+            margin: 0 0 10px;
+          }
+          h6 {
+            font-size: 13px;
+            margin: 0;
+          }
+          .paypalWd {
+            max-width: 60px;
+            width: 60px;
+            padding: 5px 0 0 12px;
+            @media (max-width: $md) {
+              max-width: 50px;
+              width: 50px;
+            }
+          }
+        }
+      }
+      .OverviewSec {
+        margin: 40px 0 0;
+      }
+      .AmenitiesOuter {
+        margin: 40px 0 0;
+        .AmenitiesContent {
+          .AmenitiesContentSubHd {
+            font-size: 14px;
+            font-weight: $font-bold;
+            margin-bottom: 20px;
+          }
+          .AmenitiesListBgRow {
+            gap: 15px;
+            margin-bottom: 25px;
+            .AmenitiesListBgCol {
+              max-width: calc(20% - 15px);
+              flex: 0 0 calc(20% - 15px);
+              background-color: #f9f9f9;
+              border: 1px solid $graylightbdr;
+              padding: 20px 15px;
+              border-radius: 10px;
+              text-align: center;
+              font-size: 12px;
+              @media (max-width: $xl) {
+                padding: 15px 8px;
+              }
+              @media (max-width: $lg) {
+                max-width: calc(33.33% - 15px);
+                flex: 0 0 calc(33.33% - 15px);
+              }
+              @media (max-width: $md) {
+                padding: 8px;
+              }
+              @media (max-width: $sm) {
+                max-width: calc(50% - 15px);
+                flex: 0 0 calc(50% - 15px);
+              }
+              i {
+                min-height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 5px;
+              }
+            }
+          }
+          .AmenitiesListRow {
+            gap: 25px 15px;
+            font-size: 12px;
+            .AmenitiesListCol {
+              max-width: calc(20% - 15px);
+              flex: 0 0 calc(20% - 15px);
+              position: relative;
+              padding-left: 35px;
+              display: flex;
+              align-items: center;
+              @media (max-width: $lg) {
+                max-width: calc(33.33% - 15px);
+                flex: 0 0 calc(33.33% - 15px);
+              }
+              @media (max-width: $sm) {
+                max-width: calc(50% - 15px);
+                flex: 0 0 calc(50% - 15px);
+              }
+              i {
+                position: absolute;
+                left: 0;
+              }
+            }
+            .AmenitiesViewMore {
+              width: 100%;
+              a {
+                color: $green;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      .ChooseRoomOuter {
+        margin: 40px 0 0;
+        .ChooseRoomSearchField {
+          border: 1px solid $graylightbdr;
+          border-radius: 10px;
+          padding: 5px;
+          margin-bottom: 10px;
+          @media (max-width: $sm) {
+            padding-bottom: 10px;
+          }
+          .ChooseRoomSearchFieldLeft {
+            flex: 1 1;
+            margin-right: 20px;
+            @media (max-width: $lg) {
+              margin-right: 5px;
+            }
+            @media (max-width: $sm) {
+              flex: inherit;
+              flex-wrap: wrap;
+              margin-right: 0;
+              width: 100%;
+            }
+            .SrchLabel {
+              color: #837e85;
+              font-size: 12px;
+              margin-bottom: 0;
+            }
+            .SrchInput {
+              border: 0;
+              padding: 0;
+              height: auto;
+              line-height: inherit;
+              font-size: 14px;
+              @media (max-width: $lg) {
+                font-size: 12px;
+              }
+              &::-webkit-input-placeholder {
+                color: $black;
+              }
+              &::-moz-placeholder {
+                color: $black;
+              }
+              &::-moz-placeholder {
+                color: $black;
+              }
+              &::-ms-input-placeholder {
+                color: $black;
+              }
+            }
+            .ChooseRoomSearchFieldWd1 {
+              width: 60%;
+              border-right: solid 1px #ebe6de;
+              background: url(/_next/static/media/cald-icon.80b861c9.png)
+                no-repeat right 15px center;
+              padding: 5px 40px 5px 15px;
+              @media (max-width: $lg) {
+                padding: 5px 20px 5px 5px;
+                background-position: right 10px center;
+                background-size: 16px;
+              }
+              @media (max-width: $sm) {
+                width: 100%;
+                border-right: 0;
+                border-bottom: 1px solid #ebe6de;
+              }
+            }
+            .ChooseRoomSearchFieldWd2 {
+              width: 40%;
+              @media (max-width: $sm) {
+                width: 100%;
+              }
+              .GuestBtn {
+                background: none;
+                border: none;
+                border-radius: 0;
+                padding: 5px 30px 5px 15px;
+                color: #837e85;
+                white-space: inherit;
+                text-align: left;
+                font-size: 14px;
+                position: relative;
+                width: 100%;
+                @media (max-width: $lg) {
+                  font-size: 12px;
+                  padding: 5px 15px 5px 5px;
+                }
+                span {
+                  display: block;
+                  color: #000;
+                }
+                &::after {
+                  border: none;
+                  background: url(/_next/static/media/arrow2.fbf59347.png)
+                    no-repeat center center;
+                  width: 16px;
+                  height: 9px;
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  right: 10px;
+                  content: "";
+                  margin: 0;
+                }
+              }
+            }
+          }
+          .ChooseRoomSearchBtn {
+            background-color: $blue;
+            border: 0;
+            font-size: 14px;
+            padding: 5px 18px;
+            @media (max-width: $lg) {
+              font-size: 13px;
+              padding: 5px 10px;
+            }
+            @media (max-width: $sm) {
+              width: 100%;
+              padding: 10px 15px;
+              justify-content: center;
+              margin: 10px 0 0;
+            }
+            i {
+              width: 20px;
+              display: block;
+              margin-right: 10px;
+              @media (max-width: $lg) {
+                margin-right: 5px;
+              }
+            }
+            &:hover {
+              background-color: $yellow;
+            }
+          }
+        }
+        .SelectRoomOuter {
+          .SelectionRoomList {
+            background-color: #f9f9f9;
+            border: 1px solid $graylightbdr;
+            padding: 20px 35px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-top: 30px;
+            @media (max-width: $sm) {
+              padding: 15px;
+            }
+            .SelectionRoomListLink {
+              position: relative;
+              margin-right: 40px;
+              padding-right: 40px;
+              @media (max-width: $sm) {
+                margin-right: 15px;
+                padding-right: 15px;
+                width: calc(50% - 10px);
+              }
+              &:after {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                content: "";
+                background-image: url(../../../public/assets/arrow-room.png);
+                background-repeat: no-repeat;
+                width: 11px;
+                height: 17px;
+              }
+              &:last-child {
+                padding-right: 0;
+                margin-right: 0;
+              }
+              &:last-child:after {
+                display: none;
+              }
+              span {
+                display: block;
+              }
+            }
+          }
+        }
+        .RoomShowingPaging {
+          font-size: 12px;
+          .RoomShowlist {
+            gap: 15px 20px;
+            flex: 1 1;
+            padding-right: 10px;
+            span {
+              color: $green;
+              font-weight: $font-bold;
+            }
+          }
+        }
+      }
+      .GuestReview {
+        margin: 25px 0 0;
+      }
+      .Policies {
+        margin: 40px 0 0;
+      }
+    }
+    .HotelDtlRight {
+      width: 30.5%;
+      position: sticky;
+      top: 110px;
+      z-index: 1;
+      align-self: flex-start;
+      @media (max-width: $lg) {
+        width: 100%;
+        margin-top: 30px;
+      }
+      .HtlBtnGrp {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0 0 15px;
+        a {
+          height: 36px;
+          line-height: 36px;
+          padding: 0 15px;
+          display: flex;
+          align-items: center;
+          background: #fff;
+          border-radius: 36px;
+          color: #000;
+          margin-left: 10px;
+          box-shadow: 0 0 7px rgba(0, 0, 0, 0.07);
+          border: 1px solid #ddd;
+          img {
+            padding-right: 8px;
+          }
+          &:hover {
+            background: #effbfc;
+            color: #000;
+          }
+        }
+      }
+      .PkgInfo {
+        background-color: #f9f9f9;
+        padding: 25px;
+        border-radius: 10px;
+        margin: 15px 0;
+        @media (max-width: $xxl) {
+          padding: 15px;
+          margin: 10px 0;
+        }
+        h4 {
+          font-size: 18px;
+          font-weight: 700;
+          margin: 0 0 15px;
+          @media (max-width: $xxl) {
+            font-size: 16px;
+            margin: 0 0 10px;
+          }
+        }
+        h5 {
+          font-size: 14px;
+          margin: 0 0 5px;
+        }
+        p,
+        .PkgTax {
+          font-size: 12px;
+          @media (max-width: $xxl) {
+            margin: 0 0 10px;
+          }
+        }
+        hr {
+          border-color: #d8d8d8;
+          opacity: 1;
+          @media (max-width: $xxl) {
+            margin: 10px 0;
+          }
+        }
+        .PkgPrice {
+          font-size: 22px;
+          color: #219ebc;
+          @media (max-width: $xxl) {
+            font-size: 20px;
+          }
+        }
+        .BedBathGroup {
+          ul {
+            border: 1px solid #d8d8d8;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            @media (max-width: $xl) {
+              flex-wrap: wrap;
+            }
+            li {
+              display: flex;
+              align-items: center;
+              width: 50%;
+              padding: 15px 0 15px 15px;
+              border-right: 1px solid #d8d8d8;
+              @media (max-width: $xxl) {
+                padding: 10px 0 10px 10px;
+              }
+              @media (max-width: $xl) {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #d8d8d8;
+              }
+              &:last-child {
+                border: none;
+              }
+              img {
+                margin-right: 10px;
+              }
+              span {
+                strong {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+      .DtlRtInOut {
+        ul {
+          display: flex;
+          align-items: center;
+          margin: 20px 0;
+          text-align: center;
+          @media (max-width: $xxl) {
+            margin: 10px 0;
+          }
+          li {
+            width: 50%;
+            strong {
+              display: block;
+            }
+          }
+        }
+      }
+      .ShowMap {
+        border: 1px solid $graylightbdr;
+        border-radius: 10px;
+        position: relative;
+        .MapImg {
+          margin-bottom: 0;
+          border-radius: 10px;
+          width: 100%;
+        }
+        .ShowMapTop {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          img {
+            margin-bottom: 10px;
+            @media (max-width: $xxl) {
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

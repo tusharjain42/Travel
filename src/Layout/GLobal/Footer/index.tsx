@@ -1,7 +1,5 @@
 "use client";
-
-import React from "react";
-
+import Link from "next/link";
 import styles from "@/styles/Footer.module.scss";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -15,9 +13,9 @@ function Index() {
         <Row>
           <Col md={3}>
             <div className={styles.FtInfo}>
-              <a href="#">
+              <Link href="/">
                 <Image src="/assets/travel-logo.png" alt="" />
-              </a>
+              </Link>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor.
@@ -29,14 +27,14 @@ function Index() {
               <h6>Quick Links</h6>
               <div className={`${styles.FtLinksCard} d-flex`}>
                 <Nav className={styles.FtrNav}>
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/aboutUs">About</Nav.Link>
-                  <Nav.Link href="/Faq">Faq</Nav.Link>
-                  <Nav.Link href="#">Contact US</Nav.Link>
+                  <Link href="/">Home</Link>
+                  <Link href="/about-us">About</Link>
+                  <Link href="/faq">Faq</Link>
+                  <Link href="/contactus">Contact US</Link>
                 </Nav>
                 <Nav className={styles.FtrNav}>
-                  <Nav.Link href="/signin">Sign In</Nav.Link>
-                  <Nav.Link href="/signup">Sign Up</Nav.Link>
+                  <Link href="/verify-email">Sign In</Link>
+                  <Link href="/verify-email">Sign Up</Link>
                 </Nav>
               </div>
             </div>
@@ -45,12 +43,13 @@ function Index() {
             <div className={styles.FtContact}>
               <h6>Connect with us</h6>
               <Nav className={styles.FtrCtNav}>
-                <Nav.Link href="#">
-                  <Image src="/assets/icon8.png" alt="" /> (000) 123 456 789
-                </Nav.Link>
-                <Nav.Link href="#">
-                  <Image src="/assets/icon9.png" alt="" /> example@email.com
-                </Nav.Link>
+                <Link href="tel:+000123456789" className={styles.NavLinkRt}>
+                  <Image src="/assets/call-icon.png" alt="Call" /> (000) 123 456
+                  789
+                </Link>
+                <Link href="mailto:example@gmail.com">
+                  <Image src="/assets/icon9.png" alt="" /> example@gmail.com
+                </Link>
               </Nav>
             </div>
           </Col>
@@ -58,8 +57,10 @@ function Index() {
             <div className={styles.CopyRight}>
               <p>
                 Copyright© 2024. All rights reserved.
-                <a href="#">Terms & Conditions</a> | 
-                <a href="#">Privacy policy</a>
+                <Link href="terms-and-conditions">Terms & Conditions</Link> |
+                <Link style={{ marginLeft: "5px" }} href="privacy-policy">
+                  Privacy policy
+                </Link>
               </p>
             </div>
           </Col>

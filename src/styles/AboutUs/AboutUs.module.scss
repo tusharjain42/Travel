@@ -1,0 +1,58 @@
+@import "../variables.scss";
+.AboutContent {
+  padding: $mpl + 50 0;
+  @media (max-width: $lg) {
+    padding: $mpl + 30 0;
+  }
+  @media (max-width: $md) {
+    padding: $mpl + 15 0;
+  }
+}
+.AboutServices {
+  background-color: $greyf2;
+  @media (max-width: $lg) {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  .AboutServicesCol {
+    background-color: $white;
+    padding: $mpl + 20 $mpl + 10 $mpl + 10;
+    border-bottom: 5px solid $yellow;
+    transition: 0.4s ease;
+    @media (max-width: $lg) {
+      margin-top: $mpl + 20;
+    }
+    @media (max-width: $md) {
+      margin-top: $mpl + 15;
+      padding: $mpl + 10;
+    }
+    &:hover {
+      border-bottom-color: $blue;
+    }
+    .AboutServicesIcon {
+      background-color: $blue;
+      width: 85px;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-bottom: $mpl + 10;
+      @media (max-width: $md) {
+        width: 68px;
+        height: 68px;
+      }
+    }
+    .ReadMoreLink {
+      text-transform: uppercase;
+      img {
+        margin-left: $mpl;
+        transition: 0.5s ease;
+      }
+      &:hover img {
+        margin-left: $mpl + 5;
+      }
+    }
+  }
+}

@@ -1,7 +1,5 @@
 "use client";
-
-import React from "react";
-
+import Link from "next/link";
 import styles from "@/styles/Home/Offer.module.scss";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -39,9 +37,9 @@ function Offer() {
                     <p>
                       Get inspired - compare and book flights with flexibility
                     </p>
-                    <a href="#" className={styles.SrchFlightBtn}>
+                    <Link href="#" className={styles.SrchFlightBtn}>
                       Search for Flights
-                    </a>
+                    </Link>
                   </div>
                 </Col>
                 <Col md={6}>
@@ -54,9 +52,9 @@ function Offer() {
                         <br />
                         before October 1, 2024
                       </p>
-                      <a href="#" className={styles.SrchFlightBtn}>
+                      <Link href="#" className={styles.SrchFlightBtn}>
                         Find Getway Deals
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </Col>
@@ -70,9 +68,9 @@ function Offer() {
                     <p>
                       Get inspired - compare and book flights with flexibility
                     </p>
-                    <a href="#" className={styles.SrchFlightBtn}>
+                    <Link href="#" className={styles.SrchFlightBtn}>
                       Search for Flights
-                    </a>
+                    </Link>
                   </div>
                 </Col>
                 <Col md={6}>
@@ -85,9 +83,9 @@ function Offer() {
                         <br />
                         before October 1, 2024
                       </p>
-                      <a href="#" className={styles.SrchFlightBtn}>
+                      <Link href="#" className={styles.SrchFlightBtn}>
                         Find Getway Deals
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </Col>
@@ -101,9 +99,9 @@ function Offer() {
                     <p>
                       Get inspired - compare and book flights with flexibility
                     </p>
-                    <a href="#" className={styles.SrchFlightBtn}>
+                    <Link href="#" className={styles.SrchFlightBtn}>
                       Search for Flights
-                    </a>
+                    </Link>
                   </div>
                 </Col>
                 <Col md={6}>
@@ -116,9 +114,9 @@ function Offer() {
                         <br />
                         before October 1, 2024
                       </p>
-                      <a href="#" className={styles.SrchFlightBtn}>
+                      <Link href="#" className={styles.SrchFlightBtn}>
                         Find Getway Deals
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </Col>

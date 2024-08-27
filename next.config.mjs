@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        domains: ['travelportalphpadmin.24livehost.com'],
+      },
+};
 
 export default nextConfig;

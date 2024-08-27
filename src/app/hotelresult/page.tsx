@@ -9,11 +9,8 @@ import Footer from "@/Layout/GLobal/Footer";
 function HotelResult() {
   return (
     <div>
-      <Header />
       <InnerBanner />
       <HotelResultPage/>
-      <NewsLetter />
-      <Footer />
     </div>
   );
 }

@@ -1,0 +1,231 @@
+@import "../variables.scss";
+.RoomListPanel {
+  margin-top: 30px;
+  .RoomListPanelHd {
+    font-size: 14px;
+    font-weight: $font-semibold;
+    margin-bottom: 15px;
+  }
+  .RoomListRow {
+    margin-left: -5px;
+    margin-right: -5px;
+    .RoomListLoop {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .RoomListCol {
+      border: 1px solid $graylightbdr;
+      height: calc(100% - 15px);
+      border-radius: 10px;
+      margin-bottom: 15px;
+      @media (max-width: $md) {
+        height: auto;
+      }
+      .RoomListFigure {
+        img {
+          width: 100%;
+          border-radius: 8px 8px 0 0;
+        }
+      }
+      .RoomListColContent {
+        padding: 12px;
+        @media (max-width: $xl) {
+          padding: 15px;
+        }
+        .RoomListColContentHd {
+          font-size: 16px;
+          line-height: 1.3;
+          font-weight: $font-bold;
+          margin-bottom: 10px;
+          &:hover {
+            color: $green;
+          }
+        }
+        .RoomServicesList {
+          flex-direction: row;
+          font-size: 11px;
+          margin-bottom: 3px;
+          li {
+            border: 0;
+            padding: 0 7px 5px 0;
+            margin-right: 4px;
+            position: relative;
+            &::after {
+              position: absolute;
+              right: 0;
+              top: 0;
+              content: "|";
+            }
+            &:last-child {
+              padding: 0;
+              margin-right: 0;
+            }
+            &:last-child::after {
+              display: none;
+            }
+          }
+        }
+        .RoomAmenitiesList {
+          margin-bottom: 10px;
+          li {
+            padding: 0 0 7px;
+            border: 0;
+            font-size: 12px;
+            i {
+              width: 16px;
+              display: inline-block;
+              margin-right: 10px;
+              img {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+        .RoomRefundableText {
+          font-size: 12px;
+          margin-bottom: 10px;
+          a {
+            font-size: 13px;
+            color: $green;
+          }
+          i {
+            margin-left: 5px;
+          }
+        }
+        .RoomListMoreDetail {
+          color: $green;
+          text-decoration: underline;
+          margin-bottom: 10px;
+          &:hover {
+            text-decoration: none;
+            color: #000;
+          }
+        }
+        .RoomCategoriesText {
+          margin-bottom: 10px;
+          font-size: 12px;
+          .RoomCategoriesTextHd {
+            font-size: 14px;
+            font-weight: $font-semibold;
+            margin-bottom: 5px;
+          }
+        }
+        .RoomPriceRow {
+          margin-top: $mpl;
+          margin-bottom: $mpl;
+          .RoomPriceCol {
+            justify-content: space-between;
+          }
+          .RoomPriceCol:not(:last-child) {
+            padding-bottom: 10px;
+          }
+          .RoomRadioPrice {
+            min-width: 58px;
+            text-align: right;
+            font-size: 12px;
+          }
+        }
+        .CustomRadioBox {
+          width: 100%;
+          margin: 1px 0 0;
+          padding: 0;
+          display: flex !important;
+          flex: 1 1;
+          position: relative;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            margin: 0;
+            opacity: 0;
+          }
+          input + label {
+            font-size: 12px;
+            color: $black;
+            position: relative;
+            padding-left: $mpl + 15;
+            .MoreLink {
+              color: $green;
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+                color: $black;
+              }
+            }
+            &:before {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              border: 1px solid $graylightbdr;
+              content: "";
+            }
+            &:after {
+              position: absolute;
+              left: 2px;
+              top: 2px;
+              width: 14px;
+              height: 14px;
+              background-color: $green;
+              content: "";
+              transition: all 0.3s ease;
+              opacity: 0;
+              display: block;
+              border-radius: 50%;
+            }
+          }
+          input:checked + label {
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+        .RoomFinalPriceRow {
+          .RoomFinalPriceLeft {
+            flex: 1 1;
+            @media (max-width: $md) {
+              width: 100%;
+              flex: inherit;
+              margin-bottom: 15px;
+            }
+            @media (max-width: $sm) {
+              width: auto;
+              flex: 1;
+              margin-bottom: 0;
+            }
+            .RoomFinalPriceBig {
+              font-size: 16px;
+              color: $green;
+            }
+            .RoomFinalPriceSmall {
+              font-size: 12px;
+            }
+            .TaxesText {
+              font-size: 12px;
+            }
+          }
+          .SiteBtn {
+            background-color: #ff850e;
+            font-size: 13px;
+            padding: 7px;
+            border-radius: 5px;
+            border: 0;
+            color: #fff;
+            text-align: center;
+            min-width: 90px;
+            &:hover {
+              background-color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

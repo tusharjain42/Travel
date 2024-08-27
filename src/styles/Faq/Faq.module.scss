@@ -1,0 +1,40 @@
+@import "../variables.scss";
+
+.FaqOuter {
+  background-color: $white;
+  padding: $mpl + 60 0;
+  @media (max-width: $lg) {
+    padding: $mpl + 30 0;
+  }
+  .AcdOuter {
+    padding: 0;
+    margin: 0 0 $mpl;
+    border: 1px solid #ddd;
+    border-radius: $mpl;
+    overflow: hidden;
+    .AcdHdr {
+      padding: 0;
+      margin: 0;
+      button {
+        padding: $mpl + 10;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background-color: #fff;
+        font-weight: 600;
+        @media (max-width: $md) {
+          padding: $mpl + 5;
+        }
+      }
+    }
+    .AcdBody {
+      padding: 0 $mpl + 10 $mpl + 10;
+      margin: 0;
+      border: none;
+      @media (max-width: $md) {
+        padding: 0 $mpl + 5 $mpl + 5;
+      }
+    }
+  }
+}

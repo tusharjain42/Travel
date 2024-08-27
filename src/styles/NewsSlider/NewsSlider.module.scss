@@ -1,0 +1,50 @@
+@import "../variables.scss";
+.NewsContent {
+  padding: $mpl + 50 0;
+  @media (max-width: $lg) {
+    padding: $mpl + 30 0;
+  }
+  @media (max-width: $md) {
+    padding: $mpl + 15 0;
+  }
+  :global(.slick-list) {
+    margin: 0 -12px;
+  }
+  :global(.item) {
+    padding: 0 $mpl + 2;
+  }
+  
+  .NewsSliderCol {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    .NewsImage {
+      margin-bottom: $mpl + 10;
+      display: block;
+    }
+    .NewsDtl {
+      padding: 0 $mpl + 10 $mpl + 10;
+    }
+    .NewsHeading {
+      font-size: $mpl + 10;
+      margin-bottom: $mpl;
+      font-weight: 600;
+      &:hover {
+        color: $blue;
+      }
+    }
+    .NewsInfoList {
+      margin-bottom: $mpl;
+      .NewsInfo {
+        margin-right: $mpl;
+        font-size: 13px;
+        img {
+          margin-right: 5px;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

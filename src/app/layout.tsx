@@ -4,6 +4,10 @@ import Header from "@/Layout/GLobal/Header";
 import NewsLetter from "@/Layout/GLobal/NewsLetter";
 import Footer from "@/Layout/GLobal/Footer";
 import "../styles/global.scss";
+import NextLoader from "@/Layout/nextLoader";
+import AuthProvider from "@/context/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +31,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Header />
-        {children}
+        <AuthProvider>{children}</AuthProvider>
+        <ToastContainer />
+        <NextLoader />
         <NewsLetter />
         <Footer />
       </body>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import Link from 'next/link';
 import { Form, Card, Image, Nav, Row, Col, InputGroup, DropdownButton, Dropdown} from 'react-bootstrap';
 import CountryFlag from 'react-country-flag';
 import styles from "@/styles/FlightBooking/FlightBookingLeftSide.module.scss";
@@ -241,8 +241,8 @@ function FlightBookingLeftSide() {
             </Card>
           </div>
          <div className={`${styles.ButtonBottomBox} d-flex flex-wrap align-items-center`}>                          
-             <Nav.Link href="#" className={styles.ButtonBottomBack}> <Image src="/assets/back-arrow.png" className={"me-2"} alt="img"/> Back</Nav.Link>
-             <Nav.Link href="#" className={styles.SiteBtn}>Confirm Booking</Nav.Link> 
+             <Link href="#" className={styles.ButtonBottomBack}> <Image src="/assets/back-arrow.png" className={"me-2"} alt="img"/> Back</Link>
+             <Link href="#" className={styles.SiteBtn}>Confirm Booking</Link> 
           </div> 
       </div>    
   );

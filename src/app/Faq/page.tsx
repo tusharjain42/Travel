@@ -1,7 +1,6 @@
 
 import React from "react";
-
-import Faq from "../../Layout/Home/Components/Faq";
+import FaqPage from "@/Layout/Faq";
 import InnerBannerHd from "../../Layout/InnerBannerHeading";
 
 function HomePage() {
@@ -12,7 +11,7 @@ function HomePage() {
         headingText="FAQ" 
         subheadingText=""
       />
-      <Faq />
+      <FaqPage />
       
     </div>
   );

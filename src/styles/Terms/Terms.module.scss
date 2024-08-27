@@ -1,0 +1,20 @@
+@import "../variables.scss";
+
+.CommonOuter {
+  background-color: $white;
+  padding: 70px 0;
+  ul {
+    list-style: disc;
+    margin: 0 0 20px 30px;
+    li {
+      margin: 0 0 8px;
+    }
+  }
+  ol {
+    list-style: decimal;
+    margin: 0 0 20px 30px;
+    li {
+      margin: 0 0 8px;
+    }
+  }
+}
